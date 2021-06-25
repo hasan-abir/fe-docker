@@ -169,5 +169,56 @@
                 grid-template-columns: repeat(auto-fit, minmax(@consonant-DoubleWideCard-desktopMinWidth, max-content));
             }
         }
+
+        // IE-11 grid solution
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            &--2up&--doubleWideCards {
+                grid-template-columns: repeat(2, minmax(@consonant-DoubleWideCard-desktopMinWidth, max-content));
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--2up {
+                grid-template-columns: repeat(2, minmax(@consonant-CardsGrid-smallerCardMinWidth, max-content));
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--3up&--doubleWideCards {
+                grid-template-columns: repeat(3, minmax(@consonant-DoubleWideCard-desktopMinWidth, max-content));
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--3up {
+                grid-template-columns: repeat(3, minmax(@consonant-CardsGrid-smallerCardMinWidth, max-content));
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--4up&--doubleWideCards {
+                grid-template-columns: repeat(4, minmax(@consonant-DoubleWideCard-desktopMinWidth, max-content));
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--4up {
+                grid-template-columns: repeat(4, minmax(@consonant-CardsGrid-smallerCardMinWidth, max-content));
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--5up&--doubleWideCards {
+                grid-template-columns: repeat(5, minmax(@consonant-DoubleWideCard-desktopMinWidth, max-content));
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+
+            &--5up {
+                grid-template-columns: repeat(5, minmax(@consonant-CardsGrid-smallerCardMinWidth, max-content));
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: @consonant-CardsGrid-gutterSize * 3;
+            }
+        }
     }
 }

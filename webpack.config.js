@@ -72,6 +72,21 @@ module.exports = {
                         },
                     },
                     {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'postcss-preset-env',
+                                        {
+                                            autoprefixer: { grid: 'autoplace' },
+                                        },
+                                    ],
+                                ],
+                            },
+                        },
+                    },
+                    {
                         loader: 'less-loader',
                         options: {
                             url: false,
